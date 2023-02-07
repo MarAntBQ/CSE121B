@@ -7,16 +7,20 @@ function isDarkActive() {
       if (isDarkModeActivated) {
           document.getElementById("stylesheetDoc").href = "/css/styles-dark.css";
           darkSwitch = 1;
+          btn.innerHTML = 'OFF';
       } else {
           document.getElementById("stylesheetDoc").href = "/css/styles.css";
           darkSwitch = 0;
+          btn.innerHTML = 'ON';
       }
   } else {
       darkSwitch = savedDarkMode;
       if (darkSwitch == 1) {
           document.getElementById("stylesheetDoc").href = "/css/styles-dark.css";
+          btn.innerHTML = 'OFF';
       } else {
           document.getElementById("stylesheetDoc").href = "/css/styles.css";
+          btn.innerHTML = 'ON';
       }
   }
   localStorage["savedDarkMode"] = darkSwitch;
